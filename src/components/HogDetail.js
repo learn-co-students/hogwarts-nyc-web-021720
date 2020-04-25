@@ -47,10 +47,15 @@ renderDetails = () =>{
 }
 
 
-// not sure how spread operator really  work in propTypes (see below )
+// not sure how spread operator really work in propTypes
+// but i can just lay them out,like initially in parent is {...hog} (see below )
 
 HogDetail.PropTypes={
-    hog: PropTypes.object.isRequired
+    weight: PropTypes.number.isRequired,
+    specialty: PropTypes.string.isRequired,
+    greased: PropTypes.bool.isRequired,
+    name: PropTypes.string.isRequired,
+    'highest Medal Achieved':PropTypes.array.isRequired,
 }
 
 
