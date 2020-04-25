@@ -10,7 +10,7 @@ export default class HogContainer extends React.Component {
     renderHogs = () => {
         const {hog}=this.props
         return (hog.map(hog => {
-           return <HogDetail key={hog.id}{...hog} />
+           return <HogDetail key={hog.name}{...hog} />
         })
         )
     }
