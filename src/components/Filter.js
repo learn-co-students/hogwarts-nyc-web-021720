@@ -2,14 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Filter = (props) =>{
-    return(
+    const {sort,greased,handleSort,toggleGreased}=props
 
+    return(
         <div className ="filters">
-            <button onClick={props.toggleGreased}>
-            {props.greased ? "Show All" : "Show Only Greased"}
+            <button onClick={toggleGreased}>
+            {greased ? "Show All" : "Show Only Greased"}
             </button>
 
-            <select value={props.sort} onChange={e=>props.handleSort(e)}>
+            <select value={sort} onChange={e=>handleSort(e)}>
                 <option value ="unsorted">Unsorted</option>
                 <option value ="name">Sort By Name</option>
                 <option value ="weight">Sort By Weight</option>
